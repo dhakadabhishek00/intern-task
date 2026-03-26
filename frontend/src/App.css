@@ -1,0 +1,202 @@
+:root {
+  --bg: #f3f6ff;
+  --card: #ffffff;
+  --text: #1a2136;
+  --muted: #66758c;
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top, #edf2ff, #f8fafc);
+  color: var(--text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-page, .dashboard-page {
+  width: min(100%, 480px);
+  margin: 0 auto;
+}
+
+.auth-card {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(29, 36, 73, 0.14);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border: 1px solid #e6eaf4;
+}
+
+.auth-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #1d2563;
+}
+
+.auth-card label {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.auth-card input,
+.search-input {
+  width: 100%;
+  background: #f8faff;
+  border-radius: 8px;
+  border: 1px solid #dbe6fb;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.auth-card button,
+.secondary-btn,
+.danger-btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.auth-card button {
+  background: var(--primary);
+  color: #fff;
+}
+
+.auth-card button:hover,
+.secondary-btn:hover,
+.danger-btn:hover {
+  filter: brightness(0.95);
+}
+
+.auth-card button:disabled,
+.secondary-btn:disabled,
+.danger-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.small-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.small-note a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.error-text {
+  color: var(--danger);
+  margin: 0;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+}
+
+.dashboard-header div {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.secondary-btn,
+.danger-btn {
+  width: auto;
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+}
+
+.secondary-btn {
+  background: #eef2ff;
+  color: var(--primary-dark);
+  border: 1px solid #c7d2fe;
+}
+
+.danger-btn {
+  background: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+}
+
+.teacher-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.teacher-card {
+  background: var(--card);
+  border-radius: 10px;
+  border: 1px solid #e4ebff;
+  padding: 0.8rem;
+}
+
+.teacher-card h3 {
+  margin: 0;
+  color: #1f2a57;
+}
+
+.teacher-card p {
+  margin: 0.2rem 0;
+  color: #56709a;
+}
+
+.empty-text {
+  margin: 0.5rem 0;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.search-input {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 540px) {
+  .app-shell {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dashboard-header div {
+    justify-content: space-between;
+  }
+}
